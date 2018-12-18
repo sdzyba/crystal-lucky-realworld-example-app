@@ -4,7 +4,8 @@ class Api::Users::Create < ApiAction
       if user
         json ::Users::ShowSerializer.new(user)
       else
-        head 401
+        # TODO: list errors
+        head 422
       end
     end
   end
